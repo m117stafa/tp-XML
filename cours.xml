@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="cours_style.xsl"?>
+<ListeCours>
+<cours num="97" LANG="fr" SUBJECT="développement">
+<Titre>Technologie XML</Titre>
+<Resume> Ce cours présente la liste des technologies Web</Resume>
+<objectifs>
+<objectif>Connaître le meta langage XML</objectif>
+<objectif>connaître la technologie semi-structurée</objectif>
+</objectifs>
+<prerequis> HTML, Web, Client-Serveur</prerequis>
+<motscles>
+<motcle>XML</motcle>
+<motcle>XSD</motcle>
+<motcle>XQuery</motcle>
+</motscles>
+<auteurs>
+<auteur>Ahmed ZELLOU</auteur>
+</auteurs>
+<type>Présentiel</type>
+<duree>50h</duree>
+<support>électronique</support>
+<lienAcces>http://www.ensias.ma/xml</lienAcces>
+</cours>
+<cours num="98" LANG="fr" SUBJECT="langage">
+<Titre>Symfony</Titre>
+<Resume> Ce cours présente le framework symfony</Resume>
+<objectifs>
+<objectif>développer une application web en symfony </objectif>
+<objectif>développer une application web en PHP5</objectif>
+</objectifs>
+<prerequis> HTML, SGBD, PHP</prerequis>
+<motscles>
+<motcle>PHP</motcle>
+<motcle>PHP5</motcle>
+<motcle>Symfony</motcle>
+</motscles>
+<auteurs>
+<auteur>Ahmed ZELLOU</auteur>
+</auteurs>
+<tuteurs>
+<tuteur>Ahmed ZELLOU</tuteur>
+<tuteur>Khalid Nafil</tuteur>
+</tuteurs>
+<type>a distance</type>
+<duree>30h</duree>
+<support>électronique</support>
+<lienAcces>http://www.um5.ac.ma/symfony</lienAcces>
+</cours>
+</ListeCours>
+

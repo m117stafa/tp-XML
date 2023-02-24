@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="annunaire1.xsd"?>
+<annuaire xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  >
+ <personne matricule="AB123">
+<nom>Mrabet</nom>
+ <prenom>Ahmed</prenom>
+ <telephone>066526333</telephone>
+ <email>mrabet@gmail.com</email>
+ <sexe>M</sexe>
+<DateNaissance>1999-02-10</DateNaissance>
+<adresse> 
+<rue numero="12">Irfan </rue>
+<ville>Rabat</ville>
+</adresse> 
+ </personne>
+<personne  nationalite="FRA">
+    <nom></nom>
+    <prenom></prenom>
+    <telephone>QWE</telephone>
+
+    <email>email@gmail.com</email>
+    <sexe>M</sexe>
+    <DateNaissance>2000</DateNaissance>
+    <adresse>
+        <rue></rue>
+        <ville></ville>
+    </adresse>
+    <matricule>AS4455</matricule>
+</personne>
+ </annuaire>

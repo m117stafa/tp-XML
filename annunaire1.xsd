@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="annuaire">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personne" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nom" type="xs:string" />
+                            <xs:element name="prenom" type="xs:string" />
+                            <xs:element name="telephone" type="xs:string" />
+                            <xs:element name="email" type="xs:string" />
+                            <xs:element name="sexe" type="xs:string" />
+                            <xs:element name="DateNaissance" type="xs:string" />
+                            <xs:element name="adresse">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="rue">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="numero"
+                                                            type="xs:integer" />
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ville" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="cin" minOccurs="0" type="xs:string" />
+                            <xs:element name="matricule" minOccurs="0" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="matricule" />
+                        <xs:attribute name="nationalite" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

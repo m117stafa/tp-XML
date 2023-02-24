@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+  <xs:element name="annuaire" type="AnnuaireType"/>
+
+  <xs:complexType name="AnnuaireType">
+    <xs:sequence>
+      <xs:element name="personne" type="PersonneType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PersonneType">
+    <xs:sequence>
+      <xs:element name="nom" type="xs:string"/>
+      <xs:element name="prenom" type="xs:string"/>
+      <xs:element name="cin">
+	  <xs:simpleType>
+		<xs:restriction base="xs:string">
+		  <xs:pattern value="[A-Z]{3}"/>
+		</xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+
+      <xs:element name="telephone">
+		<xs:simpleType>
+		<xs:restriction base="xs:string">
+		<xs:pattern value="0(5|6|7|8|9)[0-9]{8}"/>
+		</xs:restriction>
+		</xs:simpleType>
+		</xs:element>
+     <xs:element name="email">
+		  <xs:simpleType>
+			<xs:restriction base="xs:string">
+		    <xs:pattern value="[\w\d._%+-]+@[\w\d.-]+\.[\w]{2,}"/>
+			</xs:restriction>
+		  </xs:simpleType>
+		</xs:element>
+
+      <xs:element name="sexe">
+		<xs:simpleType>
+		<xs:restriction base="xs:string">
+		<xs:enumeration value="M"/>
+		<xs:enumeration value="F"/>
+		</xs:restriction>
+		</xs:simpleType>
+		</xs:element>
+      <xs:element name="DateNaissance" type="xs:date"/>
+ <xs:element name="adresse" type="AdresseType"/>
+      <xs:element name="matricule">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]{2}[0-9]{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+    </xs:sequence>
+    
+
+    <xs:attribute name="nationalite" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="AdresseType">
+    <xs:sequence>
+      <xs:element name="rue" type="xs:string"/>
+      <xs:element name="ville" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RueType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="numero" type="xs:integer"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

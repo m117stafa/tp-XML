@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+    <xs:element name="annuaire">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personne" type="TYPE_PERSON" minOccurs="1"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TYPE_PERSON" >    
+        <xs:sequence ><xs:element name="adress" type="TYPE_ADRESS"></xs:element></xs:sequence>
+        <xs:attribute name="id" type="xs:ID"></xs:attribute>
+        <xs:attribute name="nom" type="xs:string"></xs:attribute>
+        <xs:attribute name="telephone" >
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="^0\d{9}$"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="email">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z9-9.-]+\.[a-zA-Z]{2,}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute  name="sexe" default="M" >
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="F"></xs:enumeration>
+                    <xs:enumeration value="M"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="DateNaissance" type="xs:date"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="TYPE_ADRESS">
+        <xs:attribute name="name"></xs:attribute>
+        <xs:attribute name="numero">
+            <xs:simpleType>
+                <xs:restriction base="xs:int" >
+                   <xs:minInclusive value="0"></xs:minInclusive>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="ville" type="xs:string"></xs:attribute>
+    </xs:complexType>
+</xs:schema>

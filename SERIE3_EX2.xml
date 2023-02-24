@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logiciels 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="SERIE3_EX2.xsd">
+    <logiciel>
+        <nom>Logiciel Educatif </nom>
+        <createur>Créateur 1</createur>
+        <version>1.0</version>
+        <licence>payant</licence>
+        <plateforme>Win</plateforme>
+        <date>2022-01-01</date>
+        <identifiant>1</identifiant>
+        <langue>fr</langue>
+        <fonctionnalite>0.8</fonctionnalite>
+        <fiabilite>0.9</fiabilite>
+        <utilisabilite>0.7</utilisabilite>
+        <efficacite>0.8</efficacite>
+        <maintenabilite>0.6</maintenabilite>
+        <portabilite>0.5</portabilite>
+    </logiciel>
+    <logiciel>
+        <nom>Logiciel de streaming </nom>
+        <createur>Créateur 2</createur>
+        <version>2.0</version>
+        <licence>free</licence>
+        <plateforme>Unix</plateforme>
+        <date>2022-02-02</date>
+        <identifiant>2</identifiant>
+        <langue>en</langue>
+        <fonctionnalite>0.9</fonctionnalite>
+        <fiabilite>0.8</fiabilite>
+        <utilisabilite>0.4</utilisabilite>
+        <efficacite>0.7</efficacite>
+        <maintenabilite>0.5</maintenabilite>
+        <portabilite>0.4</portabilite>
+    </logiciel>
+</logiciels>

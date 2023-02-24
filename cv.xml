@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+<cv xmlns="http://www.cv.ma/cv"
+    xmlns:Dip=" http://www.ensias.ma/diplomas"
+      xmlns:Ep="http://www.entreprises.ma/experiences">
+  <personalInformation>
+    <name>Mustafa AZENAG</name>
+    <address>home</address>
+    <phone>0658474529</phone>
+    <email>email@gmail.com</email>
+  </personalInformation>
+  
+  <education>
+    <school>
+      <name>Ensias</name>
+      <degree>IDSIT</degree>
+       <Dip:diploma>
+        <Dip:title>CS</Dip:title>
+        <Dip:fieldOfStudy>IDSIT</Dip:fieldOfStudy>
+      </Dip:diploma>
+    </school>
+  </education>
+  
+  <Ep:workExperience>
+    <Ep:job>
+      <Ep:title>Software Developer</Ep:title>
+      <Ep:company>Stage</Ep:company>
+      <Ep:startYear>2022</Ep:startYear>
+    </Ep:job>
+  </Ep:workExperience>
+  
+  <skills>
+    <skill>skillll</skill>
+    <skill>skilll</skill>
+  </skills>
+</cv>

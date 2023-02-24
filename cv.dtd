@@ -1,0 +1,23 @@
+<!ELEMENT cv (personalInformation, education, Ep:workExperience, skills)>
+<!ELEMENT personalInformation (name, address, phone, email)>
+<!ELEMENT education (school+)>
+<!ELEMENT school (name, degree, Dip:diploma)>
+<!ELEMENT Ep:workExperience (Ep:job+)>
+<!ELEMENT skills (skill+)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT degree (#PCDATA)>
+
+<!ELEMENT Dip:diploma (Dip:title, Dip:fieldOfStudy)>
+<!ELEMENT Dip:title (#PCDATA)>
+<!ELEMENT Dip:fieldOfStudy (#PCDATA)>
+
+<!ELEMENT Ep:job (Ep:title, Ep:company, Ep:startYear)>
+<!ELEMENT Ep:title (#PCDATA)>
+<!ELEMENT Ep:company (#PCDATA)>
+<!ELEMENT Ep:startYear (#PCDATA)>
+
+<!ELEMENT skill (#PCDATA)>

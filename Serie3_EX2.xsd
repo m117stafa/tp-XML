@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="characteristicValue">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="logiciels" type="softwareList"></xs:element>
+    <xs:complexType name="softwareList">
+        <xs:sequence>
+            <xs:element name="logiciel" maxOccurs="unbounded" type="software"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="software">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="createur" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="licence" type="xs:string"/>
+            <xs:element name="plateforme" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="identifiant" type="xs:string"/>
+            <xs:element name="langue" type="xs:string"/>
+            <xs:element name="fonctionnalite" type="TYPE_FUNCTIONALITIES"/>
+            <xs:element name="fiabilite" type="TYPE_FIABILITY"/>
+            <xs:element name="utilisabilite" type="TYPE_USABILITY"/>
+            <xs:element name="efficacite" type="TYPE_EFFICACITY"/>
+            <xs:element name="maintenabilite" type="TYPE_MAINTENABILITY"/>
+            <xs:element name="portabilite" type="TYPE_PORTABILITY"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TYPE_FUNCTIONALITIES">
+        <xs:sequence>
+            <xs:element name="aptitude" type="characteristicValue"/>
+            <xs:element name="accuracy" type="characteristicValue"/>
+            <xs:element name="interoperability" type="characteristicValue"/>
+            <xs:element name="regulatoryCompliance" type="characteristicValue"/>
+            <xs:element name="security" type="characteristicValue"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TYPE_FIABILITY">
+        <xs:sequence>
+            <xs:element name="maturity" type="characteristicValue"/>
+            <xs:element name="faultTolerance" type="characteristicValue"/>
+            <xs:element name="recoverability" type="characteristicValue"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="TYPE_USABILITY">
+        <xs:sequence>
+            <xs:element name="comprehensibility" type="characteristicValue"/>
+            <xs:element name="easeOfLearning" type="characteristicValue"/>
+            <xs:element name="exploitability" type="characteristicValue"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TYPE_EFFICACITY">
+        <xs:sequence>
+            <xs:element name="resourceEfficiency" type="characteristicValue"/>
+            <xs:element name="timeEfficiency" type="characteristicValue"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TYPE_MAINTENABILITY">
+        <xs:sequence>
+            <xs:element name="testability" type="characteristicValue"/>
+            <xs:element name="stability" type="characteristicValue"/>
+            <xs:element name="modifiability" type="characteristicValue"/>
+            <xs:element name="analyzability" type="characteristicValue"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TYPE_PORTABILITY">
+        <xs:sequence>
+            <xs:element name="interchangeability" type="characteristicValue"/>
+            <xs:element name="portabilityCompliance" type="characteristicValue"/>
+            <xs:element name="installability" type="characteristicValue"/>
+            <xs:element name="adaptability" type="characteristicValue"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- définition de type pour les caractéristiques de qualité -->
+    <!--<xs:simpleType name="characteristicValue">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-\- définition de type pour les métadonnées du logiciel -\->
+    <xs:simpleType name="softwareMetadata">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Win"/>
+            <xs:enumeration value="Unix"/>
+            <xs:enumeration value="Mac"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-\- définition de type pour le type de licence -\->
+    <xs:simpleType name="softwareLicence">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="payant"/>
+            <xs:enumeration value="free"/>
+            <xs:enumeration value="shareware"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-\- définition de l'élément racine -\->
+    <xs:element name="softwareQualityList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="software" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="creator" type="xs:string"/>
+                            <xs:element name="version" type="xs:string"/>
+                            <xs:element name="licence" type="softwareLicence"/>
+                            <xs:element name="platform" type="softwareMetadata"/>
+                            <xs:element name="date" type="xs:date"/>
+                            <xs:element name="id" type="xs:string"/>
+                            <xs:element name="language" type="xs:string"/>
+                            <xs:element name="functionality">
+                                <xs:complexType >
+                                    <xs:sequence>
+                                        <xs:element name="aptitude" type="characteristicValue"/>
+                                        <xs:element name="accuracy" type="characteristicValue"/>
+                                        <xs:element name="interoperability" type="characteristicValue"/>
+                                        <xs:element name="regulatoryCompliance" type="characteristicValue"/>
+                                        <xs:element name="security" type="characteristicValue"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="reliability">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="maturity" type="characteristicValue"/>
+                                        <xs:element name="faultTolerance" type="characteristicValue"/>
+                                        <xs:element name="recoverability" type="characteristicValue"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="usability">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="comprehensibility" type="characteristicValue"/>
+                                        <xs:element name="easeOfLearning" type="characteristicValue"/>
+                                        <xs:element name="exploitability" type="characteristicValue"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="efficiency">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="resourceEfficiency" type="characteristicValue"/>
+                                        <xs:element name="timeEfficiency" type="characteristicValue"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="maintainability">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="testability" type="characteristicValue"/>
+                                    <xs:element name="stability" type="characteristicValue"/>
+                                    <xs:element name="modifiability" type="characteristicValue"/>
+                                    <xs:element name="analyzability" type="characteristicValue"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                            </xs:element>
+                            <xs:element name="portability">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="interchangeability" type="characteristicValue"/>
+                                        <xs:element name="portabilityCompliance" type="characteristicValue"/>
+                                        <xs:element name="installability" type="characteristicValue"/>
+                                        <xs:element name="adaptability" type="characteristicValue"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+    </xs:element>-->
+
+                            
+   
